@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- linking the fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <!-- linking CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Article preview component</title>
+
+
+</head>
+<body>
+  <main>
+    <div class="image">    
+      <img id="main-image" src="/images/drawers.jpg" alt="Green drawrs">
+    </div>
+    <div class="content">
+      <h1>
+          Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home
+      </h1>
+      <p class="content-p">
+          Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.
+      </p>
+      <div class="info">
+        <img id="avatar" src="/images/avatar-michelle.jpg" alt="image of michelle">
+        <div class="name-date">
+          <h2>Michelle Appleton</h2>
+          <p class="date">28 Jun 2020</p>
+        </div>
+        <div id="myLink" class="link"><img src="/images/icon-share.svg" alt="share icon"></div>
+
+      </div>
+
+    </div>
+    <div id="popup" class="popup hide">
+      <span>SHARE</span>
+      <a href="https://www.facebook.com/" target="_blank"><img class="icons" src="/images/icon-facebook.svg" alt="Facebook icon"></a>  
+      <a href="https://www.twitter.com/" target="_blank"><img class="icons" src="/images/icon-twitter.svg" alt="Twitter icon"></a>  
+      <a href="https://www.pinterest.com/" target="_blank"><img class="icons" src="/images/icon-pinterest.svg" alt="Pintrest icon"></a>  
+    </div>
+    <div  id="triangle" class="triangle hide"></div>
+    <script src="index.js"></script>
+  </main>
+  
+
+</body>
+</html>

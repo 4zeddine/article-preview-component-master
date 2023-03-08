@@ -1,0 +1,248 @@
+/* CSS reset  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------------------------------------------- */
+:root{
+  --DarkGrayBlue: hsl(217, 19%, 35%);
+  --DarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayBlue: hsl(213, 44%, 95%);
+  --white: hsl(213, 44%, 100%);
+}
+/* Body styles */
+body{
+  background-color: var(--LightGrayBlue);
+  font-family: 'Manrope', sans-serif;
+}
+/* Main styles */
+
+main{
+  max-width: 730px;
+  max-height: 280px;
+  margin:16.25rem auto;
+  display: flex;
+  background-color: var(--white);
+  border-radius: 8px;
+
+  position: relative;
+}
+
+/* Main image */
+
+#main-image{
+  max-width: 285px;
+  height: 280px;
+  border-radius:  8px 0 0 8px ;
+}
+
+/* content section styles */
+
+.content{
+
+  max-width: 445px;
+  padding: 34px 40px 34px;
+}
+
+h1{
+  color: var(--DarkGrayBlue);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 135.1%;
+}
+.content-p{
+  color: var(--DarkBlue);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 147.6%;
+  margin:24px 0;
+}
+/* info section */
+.info{
+  display: flex;
+}
+#avatar{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+}
+.name-date{
+  margin:5px 126px 5px 16px;
+}
+h2{
+  color: var(--DarkGrayBlue);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.date{
+  color: var(--GrayishBlue);
+  font-weight: 500;
+  font-size: 13px;
+}
+.link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  background-color: var(--LightGrayBlue);
+  cursor: pointer;
+}
+.link a{
+  margin-left: 2px;
+  margin-bottom: 3px;
+}
+/* PopUp styles */
+.popup{
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  width: 248px;
+  height: 55px;
+  background-color: var(--DarkGrayBlue);
+  max-width: 248px;
+  color: var(--GrayishBlue);
+  border-radius: 8px;
+  top: 50%;
+  left: 70%;
+  z-index: 10;
+}
+.popup span{
+  font-size: 13px;
+  letter-spacing: 0.38em;
+  margin-left: 38px;
+  margin-right: 22px;
+}
+.icons{
+  width: 20px;
+  height: 20px;
+  margin-right: 17px;
+}
+.triangle{
+  width: 53px;
+  height: 29px;
+  position: absolute;
+  clip-path: polygon(50% 0%, 31% 47%, 73% 47%);
+  background-color: var(--DarkGrayBlue);
+  transform: rotate(180deg);
+  top: 64%;
+  left: 84%;
+  z-index: 10;
+}
+.hide{
+  display: none;
+}
+/* media querry */
+@media (max-width:780px) {
+  main{
+    flex-direction: column;
+    max-width: 80%;
+    max-height: none;
+    overflow: hidden;
+  }
+  .image{
+    width: 100%;
+  }
+  #main-image{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .name-date{
+    margin: 0 20% 5px 16px;
+  }
+  .popup{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+    max-width: 100%;
+    border-radius: 0 0 8px 8px;
+    top: 88%;
+    left: 0%;
+  }
+  .triangle{
+    display: none;
+  }
+  .content{
+    padding: 34px 10% 10px;
+  }
+  .hide{
+    display: none;
+  }
+  .link{
+    position: relative;
+    z-index: 100;
+  }
+}
+/* Phone media querry */
+@media (max-width:490px) {
+  main{
+    margin: 215px auto;
+    max-width: 90%;
+  }
+  .popup{
+    top: 89.5%;
+  }
+  .content{
+    padding: 24px 7% 10px;
+  }
+}
+@media (max-width:350px) {
+
+  .popup{
+    flex-wrap: wrap;
+  }
+  .popup span{
+    margin-left: 7%;
+    margin-right: 22px;
+  }
+  .name-date{
+    margin: 0 10% 5px 16px;
+  }
+}
